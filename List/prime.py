@@ -1,3 +1,4 @@
+l=[1,2,3,4,5,6,7,8,9,10,11]
 def divisible(num:int)->int:
     count=0
     while True:
@@ -6,4 +7,12 @@ def divisible(num:int)->int:
                 count+=1
         break
     return count
-print(divisible(4))
+
+
+def primeprinter(lst:list)->None:
+    for item in lst:
+        if divisible(item)==2 or divisible(item)==1:
+            print(item)
+
+
+primeprinter(l)
