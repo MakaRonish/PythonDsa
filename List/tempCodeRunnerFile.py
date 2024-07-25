@@ -1,2 +1,2 @@
-lis=[5,7,4,2,8,,7,6,9,10,1,2]
-print(lis)
+lst=[f"{i}5 facotr" if i%5==0 else f"{i}not div by 5" for i in range(1,50)]
+print(lst)
