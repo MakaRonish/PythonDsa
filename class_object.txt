@@ -1,0 +1,85 @@
+oop:
+it is used when we make a very complicated stuff like for bankby dividing each part into an object.
+it is a process of diving into sub problem/part
+
+
+concepts:
+1.Classes
+2.Object
+3.polymorphism
+4.Encapsulation
+5.Inheritance
+
+
+classes and object:
+
+class is a blueprint.
+
+title-student
+sub-id
+name
+age
+gender
+
+object is group of attribute/ variable of student which is class
+
+class is generalized while object is specificed 
+
+
+for class always variable name start with capital 
+
+when object is made and try to print object it will print address and to acces its attribute use .-----
+
+
+each object is independent of each other
+
+methods:
+
+function inside a class is called a method
+and in method syntax
+def dis(self):   self mandatory
+and to acces the attribute from class inside a method
+	print(self.id)
+
+
+self is calling the object
+
+s1.display():
+
+making every repetating step to an method is the way to do it
+
+if we make variable using self. then it will create a global variable but without using self it will be local 
+
+and when we asing a value in self.id it is like overwriting
+
+
+magiv/dunde method
+
+def __init__(self):
+
+all the code inside this will rull automaticly without being called every time an object is created
+
+
+parameter in method
+
+def updateName(self,new_name:str):
+	self.name=new_name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
