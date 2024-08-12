@@ -32,6 +32,7 @@ product_detail=[
     ]
 print(product_detail[1].price)
 
+
     
 def checkout():
     products={}
