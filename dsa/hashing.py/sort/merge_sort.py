@@ -40,6 +40,32 @@ def sortSorting_arr(l1,l2):
 print(merge(l))
 
 
+def sort(arr1,arr2):
+    i=0
+    j=0
+    sorted_arr=[]
+    while True:
+        if i>=len(arr1) and j>=len(arr2):
+            break
+        elif i>=len(arr1):
+            i=len(arr1)-1
+        elif j>=len(arr2):
+            j=len(arr2)-1
+        if arr1[i]<arr2[j]:
+            sorted_arr.append(arr1[i])
+            i+=1
+        elif arr2[j]<arr1[i]:
+            sorted_arr.append(arr2[j])
+            j+=1
+        elif arr2[j]==arr1[i]:
+            sorted_arr.append(arr2[j])
+            j+=1
+            sorted_arr.append(arr1[i])
+            i+=1
+            
+        return sorted_arr
+    
+print(sort([2,4,6,7,8],[1,2,3,5,9,10]))
 
 
         
