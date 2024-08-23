@@ -23,6 +23,37 @@ class Solution(object):
                 return same
         return same
 
+
+def check(arr):
+    small=arr[0]
+    index=0
+    sorted=False
+    for i in range(1,len(arr)):
+        if arr[i]<small:
+            small=arr[i]
+            index=i
+
+    Order=arr[index+1]
+    for i in range(len(arr)):
+        if index==len(arr):
+            index=0
+        if arr[index]<=Order:
+            sorted=True
+            if index+1==len(arr):
+                Order=arr[index]
+                index+=1
+            else:
+                index+=1
+                Order=arr[index+1]
+        else:
+            return False
+    return sorted
+
+
+
+    
+
+
 # class Solution2(object):
 #     def check(self, nums):
 #         """
