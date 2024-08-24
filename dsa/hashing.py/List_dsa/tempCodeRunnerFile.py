@@ -1,11 +1,9 @@
-arr=[5,10,20,66,2,3]
-def rora(arr):
-    rotation=0
-    for i in range(0,len(arr)-1):
-        if arr[i]>arr[(i+1)]:
-            rotation+=1
-        if rotation>1:
-            return False
-    return True
+def rotate(nums,k):
+    k=k%len(nums)
+    back=nums[:-k]
+    for i in back:
+        nums.append(i)
+        nums.pop(0)
+    return nums
 
-print(rora(arr))
+print(rotate([1,2,3,4,5,6,7],3))

@@ -25,6 +25,24 @@ def dubli(nums):
     print(nums)
     return j+1
 
+arr=[1,1,1,2,3,4,5]
+dic={}
+for i in range(0,len(arr)):
+     dic[arr[i]]=0
+
+
+i=0
+for key in dic.keys():
+     arr[i]=key
+     i+=1
+
+print(arr)
+     
+
+
+               
+          
+
             
           
           
