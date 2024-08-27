@@ -20,7 +20,7 @@ class Solution(object):
 a=Solution()
 k=3
 nums=[1,2,3,4,5,6,7]
-new=nums[:-k]
+new=nums[-1:-k:-1]
 print(new)
 
 
@@ -36,6 +36,33 @@ def rotate(nums,k):
     return nums
 
 print(rotate([1,2,3,4,5,6,7],3))
+
+#slicong
+def rot(nums,k):
+    nums[:]=nums[-k:]+nums[:-k]
+    print(nums)
+
+rot([1,2,3,4,5,6,7,8],5)
+
+
+#optimal 
+def reverse_arr(arr,i,j):
+    while j>i:
+        arr[i],arr[j]=arr[j],arr[i]
+        i+=1
+        j-=1
+   
+
+
+def rotated_by(arr,k):
+    k=k%len(arr)
+    reverse_arr(arr,i=len(arr)-k,j=len(arr)-1)
+    reverse_arr(arr,i=0,j=len(arr)-1-k)
+    reverse_arr(arr,i=0,j=len(arr)-1)
+    print(arr)
+
+rotated_by([1,2,3,4,5,6],6)
+
 
 
 

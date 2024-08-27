@@ -4,23 +4,28 @@ class Solution(object):
         :type nums: List[int]
         :rtype: None Do not return anything, modify nums in-place instead.
         """
-        zeros,number=0,0
+        zero = 0
+        pointer = 0
         while True:
-            if nums[zeros]!=0 and zeros < len(nums):
-                zeros+=1
-            if nums[number]==0 and number<len(nums):
-                number+=1
-            if zeros<number:
-                nums[zeros],nums[number]=nums[number],nums[zeros]
+            if nums[zero] != 0 and zero < len(nums)-1:
+                zero += 1
+            if nums[pointer] == 0 and pointer < len(nums)-1:
+                pointer += 1
+            if zero > pointer:
+                pointer += 1
             else:
-                number+=1
-            if zeros>=len(nums) and number>=len(nums):
+                nums[zero], nums[pointer] = nums[pointer], nums[zero]
+            if pointer >= len(nums) - 1:
                 break
         return nums
-    
-a=Solution()
-print(a.moveZeroes([1,0,1]))
 
 
-            
-            
+a = Solution()
+print(
+    a.moveZeroes(
+        [0,0,0,0,0,0]
+    )
+)
+
+
+
