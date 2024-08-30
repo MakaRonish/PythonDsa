@@ -24,12 +24,10 @@ def longest_sub(arr,k):
             if length<c:
                 length=c
         else: 
-            for j in range(i,len(arr)):
-                sum=0
-                for k in range(i,j+1):
-                    sum+=arr[k]
-                if sum==k and length<(i-j+1):
-                    length=i-j+1
+            for j in range(i+1,len(arr)):
+                sum+=arr[j]
+                if sum==k and length<(j-i+1):
+                    length=j-i+1
                         
                         
         i+=1
@@ -40,3 +38,22 @@ def longest_sub(arr,k):
 
     
 print(longest_sub([8,-9,10,-2,-10,6,18,17],17))
+
+
+def sub_array(arr,n,k):
+    i=0
+    length=0
+    for j in range(n):
+        sum=arr[j]
+
+        pointer=j+1
+        if j==n-1:
+            if sum==k and length<1:
+                length=1
+        else:
+            for l in range(j,pointer+1):
+                sum+=arr[l]
+                if sum==k and length<l-j+1:
+                    length=l-j+1
+    return length
+                
