@@ -1,22 +1,11 @@
-def positive(arr,k):
-    sum=0
-    i=0
-    r=1
-    max=0
-
-    while i<len(arr) or r<len(arr):
-        sum+=arr[i]
-        while sum<=k and r<len(arr):
-            sum+=arr[r]
-            r+=1
-            if sum==k and max<(r-i+1):
-                max=r-i+1
+def dic_method(nums,target):
+    dic={}
+    for i in range(len(nums)):
+        if dic[nums[i]] not in dic:
+            dic[nums[i]]=i
+        needed=target-nums[i]
+        if needed in dic:
+            return [dic[needed],i]
         
-        while sum>k and i<len(arr):
-            sum=sum-arr[i]
-            i+=1
-            if sum==k and max<(r-i+1):
-                max=r-i+1
-    return max
 
-print(positive([1,2,3,1,1,1,1,3,3],6))
+print(dic_method([2,7,11,15],9))
