@@ -16,9 +16,24 @@ def dic_method(nums,target):
         if nums[i] not in dic.keys():
             dic[nums[i]]=i
         needed=target-nums[i]
-        if needed in dic:
+        if needed in dic and dic[needed]!=i:
             return [dic[needed],i]
         
 
 print(dic_method([2,7,11,15],9))
+
+def true_false(nums,target):
+    nums.sort()
+    i=0
+    j=len(nums)-1
+    while j>i:
+        if nums[i] + nums[j]==target:
+            return True
+        elif nums[i] + nums[j]<target:
+            i+=1
+        else:
+            j-=1
+    return False
+
+
                 
