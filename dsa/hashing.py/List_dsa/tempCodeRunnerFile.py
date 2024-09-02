@@ -1,11 +1,17 @@
-def dic_method(nums,target):
-    dic={}
-    for i in range(len(nums)):
-        if dic[nums[i]] not in dic:
-            dic[nums[i]]=i
-        needed=target-nums[i]
-        if needed in dic:
-            return [dic[needed],i]
-        
 
-print(dic_method([2,7,11,15],9))
+def mores(nums):
+    candidate=nums[0]
+    count=0
+    for i in range(len(nums)):
+        if nums[i]==candidate:
+            count+=1
+        else:
+            count-=1
+        # if count==0:
+        #     candidate=nums[i]
+        #     count+=1
+        if count==0:
+            candidate=nums[i+1]
+    return candidate
+
+print(mores([5,2,5,1,5]))
