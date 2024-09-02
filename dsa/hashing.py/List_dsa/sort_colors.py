@@ -33,3 +33,21 @@ class Solution(object):
 a=Solution()
 print(a.sortColors([2,0,2,1,1,0]))
 
+
+def hash_map(nums):
+    dic={}
+    for i in nums:
+        dic[i]=dic.get(dic[i],0)+1
+
+    i=0
+    for i in range(dic[0]):
+        nums[i]=0
+    for i in range(dic[0],dic[1]+dic[0]+1):
+        nums[i]=1
+    for i in range(dic[1]+dic[0],dic[1]+dic[0]+dic[2]+1):
+        nums[i]=2
+    
+
+
+        
+
