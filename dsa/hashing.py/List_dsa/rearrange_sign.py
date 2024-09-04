@@ -22,16 +22,33 @@ def reargange(nums):
     p=0
     n=0
     final=[]
-    while True:
-        if nums[p]<0:
+    while p<len(nums) and n<len(nums):
+        while nums[p]<0 and p<len(nums)-1:
             p+=1
-        if nums[n]>0:
+        while nums[n]>0 and n<len(nums)-1:
             n+=1
-        if nums[p]>0 and nums[n]<0:
+        if p<len(nums) and n<len(nums):
             final.append(nums[p])
             final.append(nums[n])
             p+=1
             n+=1
+    return final
+
+reargange([-1,1,2,3,-2,-3])
+
+
+def pointer(nums):
+    p=0
+    n=1
+    result=[0]*len(nums)
+    for i in range(len(nums)):
+        if nums[i]>0:
+            result[p]=nums[i]
+            p+=2
+        else:
+            result[n]=nums[i]
+            n+=2
+
 
         
 
