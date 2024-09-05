@@ -15,10 +15,11 @@ def leader(arr,n):
     result=[arr[-1]]
     max=arr[-1]
     for i in range(-2,-n-1,-1):
-        if arr[i]>max:
+        if arr[i]>=max:
             max=arr[i]
             result.append(max)
-    return result
+    new=result[-1::-1]
+    return new
 
 print(leader([16,17,4,3,5,2],6))
 
