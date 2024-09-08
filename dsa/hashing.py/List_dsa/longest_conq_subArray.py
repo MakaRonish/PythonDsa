@@ -113,11 +113,11 @@ def set_method(nums):
 
         if i - 1 not in nums:
             count = 1
-            while True:
-                if i + 1 in nums:
-                    count += 1
-                else:
-                    break
+            x = i
+            while x + 1 in nums:
+                count += 1
+                x += 1
+
             if count > total:
                 total = count
     return total

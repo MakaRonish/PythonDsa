@@ -1,2 +1,9 @@
-lst=[f"{i}5 facotr" if i%5==0 else f"{i}not div by 5" for i in range(1,50)]
-print(lst)
+two_D = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+]
+for i in range(len(two_D)):
+    for j in range(len(two_D[i])):
+        print(two_D[j][i],end=" ")
+    print()
