@@ -6,18 +6,16 @@ class Solution(object):
         """
         low = 0
         high = len(nums) - 1
-        minimum = nums[(low + high) // 2]
+        mini = float("inf")
         while low <= high:
             middle = (low + high) // 2
             if nums[low] <= nums[middle]:
-                if minimum < nums[middle]:
-                    minimum = nums[middle]
+                mini = min(mini, nums[low])
                 low = middle + 1
             else:
+                mini = min(mini, nums[middle])
                 high = middle - 1
-            if nums[middle] < minimum:
-                minimum = nums[middle]
-        return minimum
+        return mini
 
 
 a = Solution()
