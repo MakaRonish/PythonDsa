@@ -1,1 +1,1 @@
-print(ord("a"))
+print(4//2)
