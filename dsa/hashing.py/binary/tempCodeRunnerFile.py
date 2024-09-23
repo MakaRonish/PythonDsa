@@ -1,1 +1,1 @@
-print(4//2)
+print(round(2.4))
