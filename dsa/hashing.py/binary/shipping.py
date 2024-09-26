@@ -22,7 +22,7 @@ class Solution(object):
         :type days: int
         :rtype: int
         """
-        low = 0
+        low = max(weights)
         high = sum(weights)
         capacity = 0
         while low <= high:
@@ -36,4 +36,4 @@ class Solution(object):
 
 
 a = Solution()
-print(a.shipWithinDays([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3))
+print(a.shipWithinDays([1, 2, 3, 1, 1], 4))
